@@ -12,7 +12,14 @@
   <div class="container">
     <nav>
       <h2>Abrar</h2>
-      <ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -26,7 +33,7 @@
 <section class="hero" id="home">
   <div>
     <h1>Hi, I'm Abrar</h1>
-    <p>Frontend Developer | HTML | CSS | JavaScript | React</p>
+    <p>Frontend Developer</p>
     <a href="#projects" class="btn">View Projects</a>
   </div>
 </section>
@@ -48,6 +55,10 @@
       <div class="skill">CSS</div>
       <div class="skill">JavaScript</div>
       <div class="skill">React</div>
+      <div class="skill">Dom Manipulation</div>
+      <div class="skill">Flexbox&Grid</div>
+      <div class="skill">Media Queries</div>
+      <div class="skill">Browser Developer Tools</div>
     </div>
   </div>
 </section>
@@ -76,15 +87,30 @@
 <section class="contact" id="contact">
   <div class="container">
     <h2 class="section-title">Contact</h2>
-    <p><a href="MAILTO:abraram570@gmail.com">Gmail:abraram570@gmail.com</a></p>
-    <p><a href="www.linkedin.com/in/abdul-abrar-am">linkedIn: abdul-abrar-am</a></p>
-    <p><a href="https://github.com/abrar3011">GitHub:abrar3011</a></p>
+    <p><a href="mailto:abraram570@gmail.com">Gmail: abraram570@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/abdul-abrar-am" target="_blank">LinkedIn: abdul-abrar-am</a></p>
+    <p><a href="https://github.com/abrar3011" target="_blank">GitHub: abrar3011</a></p>
   </div>
 </section>
 
 <footer>
   <p>© 2026 Abrar | All Rights Reserved</p>
 </footer>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll("#nav-links a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    navLinks.classList.remove("active");
+  })
+})
+</script>
 
 </body>
 </html>
