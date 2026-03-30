@@ -25,6 +25,11 @@
       margin:auto;
     }
 
+    .container p a{
+      color: #111;
+      text-decoration: none;
+    }
+    
     nav{
       display:flex;
       justify-content:space-between;
